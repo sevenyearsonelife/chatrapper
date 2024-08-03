@@ -117,7 +117,7 @@ class AsyncRapper(object):
 class Rapper(object):
     def __init__(self,
                  access_token: str,
-                 model: str = "text-davinci-002-render-sha") -> None:
+                 model: str = "auto") -> None:
         self._proxy = AsyncRapper(access_token, model)
 
     def __call__(self, text: str) -> str:
